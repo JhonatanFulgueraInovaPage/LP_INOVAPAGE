@@ -1,0 +1,62 @@
+<article class="p-6 bg-white m-1 rounded-lg w-1/2">
+  <p id="dynamic-title" class="text-6xl ml-5 font-semibold text-gray-800 mb-4">
+    Servicios personalizados de <span
+      id="title-text"
+      class="text-blue-600 animate-title mt-3">Diseño UX/UI</span
+    >
+  </p>
+
+  <img
+    src="../../public/images/infoForm/infoForm.png"
+    alt="Descripción de la imagen"
+    class="w-3/4 h-auto mb-6 rounded-md mx-auto"
+  />
+
+  <section class="space-y-4 ml-5">
+    <p class="text-lg font-semibold text-gray-800">¿Tienes preguntas?</p>
+    <p class="text-gray-600">
+      Email: <strong class="text-blue-600">ventas@inovapage.com</strong>
+    </p>
+    <p class="text-gray-600">
+      Teléfono: <strong class="text-blue-600">+541153182734</strong>
+    </p>
+    <p class="text-gray-600">Horario de atención: Lun a Vie / 10am a 17pm</p>
+  </section>
+</article>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const titleElement: any = document.getElementById("title-text");
+    const titles = ["Diseño UX/UI", "Software"];
+    let currentIndex = 0;
+
+    function changeTitle() {
+      currentIndex = (currentIndex + 1) % titles.length;
+      titleElement.textContent = titles[currentIndex];
+    }
+
+    setInterval(changeTitle, 6000);
+  });
+</script>
+
+<style>
+  @keyframes slide-up {
+    0% {
+      transform: translateY(40%);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-40%);
+      opacity: 0;
+    }
+  }
+
+  .animate-title {
+    display: inline-block;
+    animation: slide-up 6s ease-in-out infinite;
+  }
+</style>

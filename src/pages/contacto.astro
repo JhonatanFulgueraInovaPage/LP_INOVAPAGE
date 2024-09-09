@@ -1,16 +1,19 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import InfoForm from "../components/InfoForm.astro";
 import FormContacto from "../components/FormContacto.astro";
 import MedContacto from "../components/MedContacto.astro";
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
 ---
-<head>
-    <title>Contacto</title>
-  </head>
-<Header/>
-<article class="h-screen min-h-screen" title="Contacto">
-  <br>
-  <FormContacto/>
-  <MedContacto/>
-</article>
-<Footer/>
+
+<Layout title="Contacto">
+  <article class="" title="Contacto">
+    <br />
+    <section
+      class="mt-5 flex flex-col-reverse lg:flex-row justify-center items-center"
+    >
+      <InfoForm />
+      <FormContacto />
+    </section>
+    <MedContacto />
+  </article>
+</Layout>
