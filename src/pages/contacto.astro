@@ -2,18 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import InfoForm from "../components/InfoForm.astro";
 import FormContacto from "../components/FormContacto.astro";
-import MedContacto from "../components/MedContacto.astro";
 ---
 
 <Layout title="Contacto">
   <article class="" title="Contacto">
     <br />
     <section
-      class="mt-5 flex flex-col-reverse lg:flex-row justify-center items-center"
+      class="mt-5 flex flex-col-reverse lg:flex-row justify-center lg:p-4"
     >
       <InfoForm />
       <FormContacto />
     </section>
-    <MedContacto />
   </article>
 </Layout>
